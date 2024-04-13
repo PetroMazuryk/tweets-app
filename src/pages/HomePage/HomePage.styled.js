@@ -8,7 +8,7 @@ export const SectionHomePage = styled.section`
 
 export const HomePageTitle = styled.h1`
   text-align: center;
-  font-size: 60px;
+  font-size: 54px;
   font-weight: bold;
   font-family: var(--font-family);
   text-transform: uppercase;
