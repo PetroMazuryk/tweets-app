@@ -7,7 +7,7 @@ function App() {
     <>
       <Suspense fallback={<div>Loader</div>}>
         <Routes>
-          <Route index element={<HomePage />}></Route>
+          <Route index element={<HomePage />} />
         </Routes>
         <Outlet />
       </Suspense>
