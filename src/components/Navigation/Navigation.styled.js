@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
+import { SiReactos } from "react-icons/si";
 
 export const MainLogo = styled.img`
   width: 180px;
@@ -30,7 +31,7 @@ export const NavContainer = styled.div`
 
 export const StyleNav = styled.nav`
   display: flex;
-  gap: 10px;
+  gap: 20px;
   margin-left: auto;
   margin-right: 22px;
   font-size: 20px;
@@ -70,5 +71,23 @@ export const StyleNavLink = styled(NavLink)`
     height: 3px;
     background-color: aqua;
     border-radius: 5px;
+  }
+`;
+
+export const StyledFaReact = styled(SiReactos)`
+  display: block;
+  margin-left: 20px;
+
+  animation: rotate 3s infinite linear;
+  -webkit-animation: rotate 3s infinite linear;
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
   }
 `;

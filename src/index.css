@@ -4,6 +4,7 @@ body[data-theme="light"] {
   --background-home: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
   --background-body: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
   --active-color: #004e92;
+  --transition: 0.5s;
 
   --button-color-active: #67d1aa;
 }
@@ -14,6 +15,7 @@ body[data-theme="dark"] {
   --background-home: linear-gradient(to right, #353554, #302b63, #17114c);
   --background-body: linear-gradient(to right, #2a0845, #6441a5);
   --active-color: rgb(126, 218, 218);
+  --transition: 0.5s;
 }
 
 a {

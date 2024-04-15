@@ -7,6 +7,7 @@ import {
   NavContainer,
   StyleNav,
   StyleNavLink,
+  StyledFaReact,
 } from "./Navigation.styled";
 
 function Navigation() {
@@ -15,6 +16,7 @@ function Navigation() {
       <Link to="/home">
         <MainLogo src={Logo} alt="Logo" />
       </Link>
+      <StyledFaReact size={30} color="aqua" />
       <StyleNav>
         <ThemeSwitcher />
         <StyleNavLink to="/home">Home</StyleNavLink>
