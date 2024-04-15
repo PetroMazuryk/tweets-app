@@ -1,9 +1,19 @@
-:root {
+body[data-theme="light"] {
   --font-family: "Montserrat";
+  --color-text: #035caa;
+  --background-home: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  --background-body: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  --active-color: #004e92;
 
-  --color-text: rgba(255, 255, 255, 0.87);
+  --button-color-active: #67d1aa;
+}
 
-  --backgroundHome: linear-gradient(to right, #8f8fca, #7193d4, #8acbc7);
+body[data-theme="dark"] {
+  --font-family: "Montserrat";
+  --color-text: #cfbfe1;
+  --background-home: linear-gradient(to right, #353554, #302b63, #17114c);
+  --background-body: linear-gradient(to right, #2a0845, #6441a5);
+  --active-color: rgb(126, 218, 218);
 }
 
 a {

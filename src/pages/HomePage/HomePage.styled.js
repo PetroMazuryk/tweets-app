@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const SectionHomePage = styled.section`
   min-height: 100vh;
-  background: var(--backgroundHome);
+  background: var(--background-home);
   padding: 20px;
 `;
 

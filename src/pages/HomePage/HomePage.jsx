@@ -7,6 +7,7 @@ const HomePage = () => {
     <SectionHomePage>
       <Container>
         <Navigation />
+
         <HomePageTitle>
           welcome to the tweets app I created at goit school as a test
           assignment
