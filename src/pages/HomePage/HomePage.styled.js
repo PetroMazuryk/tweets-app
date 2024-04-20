@@ -21,3 +21,11 @@ export const HomePageTitle = styled.h1`
     font-size: 40px;
   }
 `;
+
+export const FooterContainer = styled.div`
+  margin-top: auto;
+
+  @media screen and (max-width: 530px) {
+    font-size: 40px;
+  }
+`;
