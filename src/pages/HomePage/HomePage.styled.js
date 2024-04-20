@@ -14,12 +14,22 @@ export const HomePageTitle = styled.h1`
   text-transform: uppercase;
   color: var(--color-text);
   text-shadow: 0 0 50px blue;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 30px;
 
   @media screen and (max-width: 530px) {
     font-size: 40px;
   }
+`;
+
+export const TweetWrapper = styled.div`
+  text-align: center;
+`;
+export const HomeTweet = styled.img`
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 20px;
 `;
 
 export const FooterContainer = styled.div`
