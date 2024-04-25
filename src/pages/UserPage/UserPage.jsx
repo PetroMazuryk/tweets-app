@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import Container from "../../components/Container/Container";
 import Navigation from "../../components/Navigation/Navigation";
 import { BackButton } from "../../components/BackButton/BackButton";
+import Cards from "../../components/Cards/Cards";
 
 import {
   PageUserWrapper,
@@ -21,6 +22,7 @@ const UserPage = () => {
           <BackButton />
         </Link>
         <PageUserDescription>Tweet Cards</PageUserDescription>
+        <Cards />
       </Container>
     </PageUserWrapper>
   );
