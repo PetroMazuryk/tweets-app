@@ -1,12 +1,13 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route, Outlet } from "react-router";
+import { Spinner } from "../Spinner/Spinner";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const UserPage = lazy(() => import("../../pages/UserPage/UserPage"));
 function App() {
   return (
     <>
-      <Suspense fallback={<div>Loader</div>}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route index element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
