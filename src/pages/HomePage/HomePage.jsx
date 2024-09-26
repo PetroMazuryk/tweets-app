@@ -5,7 +5,6 @@ import ImgTweet from "../../assets/tweet.jpg";
 import {
   HomePageTitle,
   SectionHomePage,
-  FooterContainer,
   TweetWrapper,
   HomeTweet,
 } from "./HomePage.styled";
@@ -23,9 +22,8 @@ const HomePage = () => {
         <TweetWrapper>
           <HomeTweet src={ImgTweet} alt="image tweet" />
         </TweetWrapper>
-        <FooterContainer>
-          <Footer />
-        </FooterContainer>
+
+        <Footer />
       </Container>
     </SectionHomePage>
   );

@@ -12,22 +12,28 @@ export const FooterList = styled.ul`
 export const FooterItem = styled.li`
   max-width: 100%;
 `;
-export const FooterLink = styled.a`
-  color: ;
-`;
+
+export const FooterLink = styled.div``;
 
 export const FooterCopyright = styled.p`
-  font-size: 16px;
+  font-size: 10px;
   font-family: var(--font-family);
   text-transform: uppercase;
   color: var(--color-text);
-
+  text-align: center;
   text-shadow: 1px 1px 2px grey, 1px 1px 1px blue;
   box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 
-  @media screen and (max-width: 530px) {
-    text-align: center;
-    font-size: 10px;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
   }
 `;

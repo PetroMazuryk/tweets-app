@@ -11,8 +11,9 @@ export const Spinner = () => {
         wrapperStyle={{
           position: "fixed",
           top: "25%",
-          left: "45%",
+          left: "50%",
           zIndex: "19",
+          transform: "translate(-50%, -50%)",
         }}
         wrapperClass="color-ring-wrapper"
         colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
