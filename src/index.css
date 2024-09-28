@@ -3,9 +3,16 @@ body[data-theme="light"] {
   --color-text: #035caa;
   --background-home: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
   --background-body: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
+  --background-card: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a5 50.28%,
+    #4b2a98 70.99%
+  );
+  --border: 2px solid #4fd43d;
   --active-color: #004e92;
   --transition: 0.5s;
-
+  --border-radius: 10px;
   --button-color-active: #67d1aa;
   --button-hover: linear-gradient(to right, #1488cc, #2b32b2);
 }
@@ -15,9 +22,11 @@ body[data-theme="dark"] {
   --color-text: #cfbfe1;
   --background-home: linear-gradient(to right, #353554, #302b63, #17114c);
   --background-body: linear-gradient(to right, #2a0845, #6441a5);
+  --background-card: linear-gradient(to right, #000428, #004e99);
   --active-color: rgb(126, 218, 218);
+  --border: 2px solid #1488cc;
   --transition: 0.5s;
-
+  --border-radius: 10px;
   --button-color-active: #67d1aa;
   --button-hover: linear-gradient(to right, #20002c, #cbb4d4);
 }
