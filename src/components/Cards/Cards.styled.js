@@ -69,8 +69,8 @@ export const TransverseCards = styled.img`
 `;
 
 export const AvatarOvalContainer = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 130px;
+  height: 130px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,7 +89,7 @@ export const AvatarCardsCircle = styled.img`
 
 export const ImgAvatar = styled.img`
   position: absolute;
-  top: 41%;
+  top: 45%;
   left: 50%;
   width: 100px;
   height: 100px;

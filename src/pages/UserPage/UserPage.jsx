@@ -12,7 +12,7 @@ import {
 
 const UserPage = () => {
   const location = useLocation();
-  const backLink = location.state?.from ?? "/home";
+  const backLink = location.state?.from ?? "/";
   return (
     <PageUserWrapper>
       <Container>

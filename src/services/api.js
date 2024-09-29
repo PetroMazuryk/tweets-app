@@ -9,8 +9,15 @@ async function fetchUsers() {
     const response = await apiInstance.get("/tweets");
     return response.data;
   } catch (error) {
-    console.error("Error fetching users:", error);
-    throw error;
+    if (error.response) {
+      console.error(
+        "Error fetching users:",
+        error.response.status,
+        error.response.data
+      );
+    } else {
+      console.error("Error fetching users:", error.message);
+    }
   }
 }
 
