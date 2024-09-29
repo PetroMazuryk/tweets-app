@@ -5,11 +5,9 @@ export const StyleSelect = styled.select`
   height: 40px;
   border-radius: var(--border-radius);
   background: var(--background-card);
+  border: var(--border);
   padding: 6px;
   color: #c08cf5;
-  width: 100%;
-  min-width: 140px;
-  border: var(--border);
   transition: border-color 0.3s ease;
 
   &:hover {

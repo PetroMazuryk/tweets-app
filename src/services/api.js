@@ -4,8 +4,14 @@ export const apiInstance = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
 
-function fetchUsers() {
-  return axios.get("/tweets").then((response) => response.data);
+async function fetchUsers() {
+  try {
+    const response = await apiInstance.get("/tweets");
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    throw error;
+  }
 }
 
 const apiUsers = {
