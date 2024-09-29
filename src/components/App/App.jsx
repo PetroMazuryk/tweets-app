@@ -10,7 +10,6 @@ function App() {
       <Suspense fallback={<Spinner />}>
         <Routes>
           <Route index element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
           <Route path="/user" element={<UserPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>

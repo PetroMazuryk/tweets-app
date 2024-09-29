@@ -13,13 +13,13 @@ import {
 function Navigation() {
   return (
     <NavContainer>
-      <Link to="/home">
+      <Link to="/">
         <MainLogo src={Logo} alt="Logo" />
       </Link>
       <StyledFaReact size={30} color="aqua" />
       <StyleNav>
         <ThemeSwitcher />
-        <StyleNavLink to="/home">Home</StyleNavLink>
+        <StyleNavLink to="/">Home</StyleNavLink>
         <StyleNavLink to="/user">User Tweets</StyleNavLink>
       </StyleNav>
     </NavContainer>
