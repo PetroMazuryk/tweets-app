@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import themeReducer from "./themeSlice";
+import themeReducer from "./theme/themeSlice";
+import { tweetsReducer } from "./tweets/tweetsSlice";
 
 import {
   persistStore,
@@ -23,7 +24,9 @@ const persistedReducer = persistReducer(persistConfig, themeReducer);
 const store = configureStore({
   reducer: {
     theme: persistedReducer,
+    tweets: tweetsReducer,
   },
+
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

@@ -171,3 +171,28 @@ export const ButtonFollow = styled.button`
     color: var(--button-color-text);
   }
 `;
+
+export const ButtonLoadMore = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  background: var(--background-body);
+
+  border-radius: var(--border-radius);
+  padding: 14px 28px;
+  transition: var(--transition);
+
+  &:hover {
+    background: var(--button-hover);
+    color: var(--button-color-text);
+  }
+`;

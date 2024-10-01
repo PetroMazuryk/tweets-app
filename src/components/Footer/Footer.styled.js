@@ -13,7 +13,7 @@ export const FooterItem = styled.li`
   max-width: 100%;
 `;
 
-export const FooterLink = styled.div``;
+export const FooterLink = styled.a``;
 
 export const FooterCopyright = styled.p`
   font-size: 10px;
@@ -21,8 +21,12 @@ export const FooterCopyright = styled.p`
   text-transform: uppercase;
   color: var(--color-text);
   text-align: center;
-  text-shadow: 1px 1px 2px grey, 1px 1px 1px blue;
-  box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  text-shadow:
+    1px 1px 2px grey,
+    1px 1px 1px blue;
+  box-shadow:
+    6px 6px 50px rgba(0, 0, 0, 0.2),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 
   @media screen and (min-width: 480px) {

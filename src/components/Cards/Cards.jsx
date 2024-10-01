@@ -1,4 +1,13 @@
 import { useState, useEffect } from "react";
+import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectTweetsHasMore,
+  selectTweetsIsLoading,
+  selectTweetsError,
+  selectTweetsItems,
+  selectTweetsPage,
+} from "../../redux/tweets/selectors";
 import DropDown from "../DropDown/DropDown";
 import { selectOptions } from "../../constants/selectOptions";
 
@@ -6,7 +15,6 @@ import Logo from "../../assets/Logo.png";
 import PromoImg from "../../assets/picture.png";
 import Transverse from "../../assets/Rectangle.png";
 import AvatarCards from "../../assets/Ellipse.png";
-import apiUsers from "../../services/api";
 
 import {
   WrapperSelect,
@@ -25,31 +33,41 @@ import {
   CardUserFollowers,
   ImgAvatar,
   CardsLoader,
+  ButtonLoadMore,
 } from "./Cards.styled";
+import { fetchTweets } from "../../redux/tweets/operations";
 
 const Cards = () => {
+  const dispatch = useDispatch();
+  const items = useSelector(selectTweetsItems);
+  const isLoading = useSelector(selectTweetsIsLoading);
+  const error = useSelector(selectTweetsError);
+  const page = useSelector(selectTweetsPage);
+  const hasMore = useSelector(selectTweetsHasMore);
+  const isInitialFetch = useRef(true);
+
   const [filter, setFilter] = useState("all");
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const handleFilterChange = (value) => {
     setFilter(value);
   };
 
   useEffect(() => {
-    apiUsers
-      .fetchUsers()
-      .then((users) => {
-        setUsers(users);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => setLoading(false));
-  }, []);
+    if (isInitialFetch.current && !isLoading) {
+      dispatch(fetchTweets({ page }));
+      isInitialFetch.current = false;
+    }
+  }, [dispatch, items.length, page, isLoading]);
+
+  const loadMoreHandler = () => {
+    if (!isLoading && hasMore) {
+      dispatch(fetchTweets({ page }));
+    }
+  };
 
   return (
     <>
+      {error && <p>Error: {error}</p>}
       <WrapperSelect>
         {" "}
         <DropDown
@@ -59,10 +77,10 @@ const Cards = () => {
         />
       </WrapperSelect>
       <CardList>
-        {loading ? (
+        {isLoading && items.length === 0 ? (
           <CardsLoader size={50} color="aqua" />
         ) : (
-          users.map(({ id, avatar, followers, tweets, user }) => (
+          items.map(({ id, avatar, followers, tweets, user }) => (
             <CardsItem key={id}>
               <MainLogo src={Logo} alt="Logo Image" />
               <PromoImgCards src={PromoImg} alt="Promo Image" />
@@ -83,6 +101,19 @@ const Cards = () => {
           ))
         )}
       </CardList>
+      {/* {isLoading && items.length > 0 && <p>Loading more...</p>} */}
+
+      {hasMore && (
+        <ButtonLoadMore onClick={loadMoreHandler} disabled={isLoading}>
+          {isLoading && items.length > 0 ? (
+            <p>Loading more...</p>
+          ) : (
+            <p>Load more</p>
+          )}
+        </ButtonLoadMore>
+      )}
+
+      {!hasMore && <p>No more tweets to load</p>}
     </>
   );
 };

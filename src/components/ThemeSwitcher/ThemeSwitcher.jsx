@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme } from "../../redux/themeSlice";
+import { toggleTheme } from "../../redux/theme/themeSlice";
 import { FaSun } from "react-icons/fa";
 import { LuMoonStar } from "react-icons/lu";
 
