@@ -1,4 +1,4 @@
-import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js";import{G as C,n as o,F as L,L as T,C as z,N as F}from"./Navigation-AF7nQTDL.js";function I(e){return C({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(e)}const B=o.button`
+import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js";import{G as L,n as o,F as T,L as z,C as F,N as I}from"./Navigation-j3y6ur2R.js";function B(e){return L({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(e)}const S=o.button`
   width: 140px;
   height: 46px;
   display: flex;
@@ -29,11 +29,11 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
     margin-right: auto;
     margin-bottom: 20px;
   }
-`,S=o.span`
+`,M=o.span`
   display: flex;
   align-items: center;
   margin-right: 12px;
-`,M=()=>t.jsxs(B,{children:[t.jsx(S,{children:t.jsx(I,{})}),"Go Back"]}),P=e=>e.tweets.items,A=e=>e.tweets.isLoading,E=e=>e.tweets.error,R=e=>e.tweets.hasMore,U=e=>e.tweets.page,D=o.select`
+`,P=()=>t.jsxs(S,{children:[t.jsx(M,{children:t.jsx(B,{})}),"Go Back"]}),A=e=>e.tweets.items,E=e=>e.tweets.isLoading,R=e=>e.tweets.error,U=e=>e.tweets.hasMore,D=e=>e.tweets.page,G=o.select`
   width: 100%;
   height: 40px;
   border-radius: var(--border-radius);
@@ -50,7 +50,7 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   &:focus {
     border-color: #004080;
   }
-`,G=({options:e,filter:n,onSelect:r})=>{const i=a=>{r(a.target.value)};return t.jsx("div",{children:t.jsx(D,{value:n,onChange:i,children:e.map(a=>t.jsx("option",{value:a.value,children:a.label},a.value))})})},N=[{value:"all",label:"Show all"},{value:"follow",label:"Follow"},{value:"following",label:"Following"}],H="/tweets-app/assets/picture-B77hZ4Xo.png",W="/tweets-app/assets/Rectangle-Cw4HuGmw.png",O="/tweets-app/assets/Ellipse-DmnRR60u.png",q=o(L)`
+`,N=({options:e,filter:n,onSelect:r})=>{const i=a=>{r(a.target.value)};return t.jsx("div",{children:t.jsx(G,{value:n,onChange:i,children:e.map(a=>t.jsx("option",{value:a.value,children:a.label},a.value))})})},H=[{value:"all",label:"Show all"},{value:"follow",label:"Follow"},{value:"following",label:"Following"}],W="/tweets-app/assets/picture-B77hZ4Xo.png",O="/tweets-app/assets/Rectangle-Cw4HuGmw.png",q="/tweets-app/assets/Ellipse-DmnRR60u.png",X=o(T)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,12 +68,12 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
       transform: rotate(360deg);
     }
   }
-`,X=o.div`
+`,Z=o.div`
   width: 140px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-`,Z=o.ul`
+`,$=o.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -109,14 +109,14 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background-body);
-`,$=o.img`
+`,tt=o.img`
   position: absolute;
   top: 50%;
   left: 50%;
   width: 130px;
   height: 130px;
   transform: translate(-50%, -50%);
-`,tt=o.img`
+`,ot=o.img`
   position: absolute;
   top: 45%;
   left: 50%;
@@ -124,7 +124,7 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   height: 100px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-`,ot=o.div`
+`,et=o.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,18 +132,8 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
-`,et=o.p`
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: var(--color-text);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 16px;
 `,rt=o.p`
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -162,7 +152,17 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
-`,nt=o.button`
+`,nt=o.p`
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+`,st=o.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +175,8 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 36px;
-  background: var(--background-body);
+
+  background: ${({isFollowed:e})=>e?"var(--button-color-active)":"var(--background-body)"};
 
   border-radius: var(--border-radius);
   padding: 14px 28px;
@@ -189,7 +190,7 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
     background: var(--button-hover);
     color: var(--button-color-text);
   }
-`,st=o.button`
+`,it=o.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,11 +213,11 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
     background: var(--button-hover);
     color: var(--button-color-text);
   }
-`,it=()=>{const e=j(),n=s(P),r=s(A),i=s(E),a=s(U),l=s(R),p=d.useRef(!0),[m,f]=d.useState("all"),u=c=>{f(c)};d.useEffect(()=>{p.current&&!r&&(e(x({page:a})),p.current=!1)},[e,n.length,a,r]);const h=()=>{!r&&l&&e(x({page:a}))};return t.jsxs(t.Fragment,{children:[i&&t.jsxs("p",{children:["Error: ",i]}),t.jsxs(X,{children:[" ",t.jsx(G,{options:N,filter:m,onSelect:u})]}),t.jsx(Z,{children:r&&n.length===0?t.jsx(q,{size:50,color:"aqua"}):n.map(({id:c,avatar:b,followers:v,tweets:w,user:g})=>t.jsxs(J,{children:[t.jsx(K,{src:T,alt:"Logo Image"}),t.jsx(Q,{src:H,alt:"Promo Image"}),t.jsxs(V,{children:[t.jsx(Y,{src:W,alt:"Rectangle line"}),t.jsxs(_,{children:[t.jsx($,{src:O,alt:"Ellipse png"}),t.jsx(tt,{src:b,alt:g})]})]}),t.jsxs(ot,{children:[t.jsxs(rt,{children:["user: ",g]}),t.jsxs(et,{children:["tweets: ",w]}),t.jsxs(at,{children:["followers: ",v]}),t.jsx(nt,{type:"button",children:"Following"})]})]},c))}),l&&t.jsx(st,{onClick:h,disabled:r,children:r&&n.length>0?t.jsx("p",{children:"Loading more..."}):t.jsx("p",{children:"Load more"})}),!l&&t.jsx("p",{children:"No more tweets to load"})]})},lt=o.section`
+`,lt=()=>{const e=y(),n=s(A),r=s(E),i=s(R),a=s(D),l=s(U),p=d.useRef(!0),[u,f]=d.useState("all"),h=c=>{f(c)};d.useEffect(()=>{p.current&&!r&&(e(m({page:a})),p.current=!1)},[e,n.length,a,r]);const b=()=>{!r&&l&&e(m({page:a}))};return t.jsxs(t.Fragment,{children:[i&&t.jsxs("p",{children:["Error: ",i]}),t.jsx(Z,{children:t.jsx(N,{options:H,filter:u,onSelect:h})}),t.jsx($,{children:r&&n.length===0?t.jsx(X,{size:50,color:"aqua"}):n.map(({id:c,avatar:v,followers:w,tweets:j,user:g,isFollowed:x})=>t.jsxs(J,{children:[t.jsx(K,{src:z,alt:"Logo Image"}),t.jsx(Q,{src:W,alt:"Promo Image"}),t.jsxs(V,{children:[t.jsx(Y,{src:O,alt:"Rectangle line"}),t.jsxs(_,{children:[t.jsx(tt,{src:q,alt:"Ellipse png"}),t.jsx(ot,{src:v,alt:g})]})]}),t.jsxs(et,{children:[t.jsxs(at,{children:["user: ",g]}),t.jsxs(rt,{children:["tweets: ",j]}),t.jsxs(nt,{children:["followers: ",w]}),t.jsx(st,{type:"button",isFollowed:x,children:x?"Following":"Follow"})]})]},c))}),l&&t.jsx(it,{onClick:b,disabled:r,children:r&&n.length>0?t.jsx("p",{children:"Loading more..."}):t.jsx("p",{children:"Load more"})}),!l&&t.jsx("p",{children:"No more tweets to load"})]})},ct=o.section`
   padding: 20px;
   min-height: 100vh;
   background: var(--background-body);
-`,ct=o.h1`
+`,dt=o.h1`
   font-family: var(--font-family);
   display: flex;
   justify-content: center;
@@ -232,7 +233,7 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   @media screen and (max-width: 475px) {
     font-size: 31px;
   }
-`,dt=o.h1`
+`,pt=o.h1`
   font-family: var(--font-family);
   display: flex;
   justify-content: center;
@@ -247,4 +248,4 @@ import{j as t,u as j,a as s,r as d,f as x,b as y,L as k}from"./index-OxkRoSP_.js
   @media screen and (max-width: 475px) {
     font-size: 21px;
   }
-`,xt=()=>{var r;const n=((r=y().state)==null?void 0:r.from)??"/";return t.jsx(lt,{children:t.jsxs(z,{children:[t.jsx(F,{}),t.jsx(ct,{children:"Users Tweets"}),t.jsx(k,{to:n,children:t.jsx(M,{})}),t.jsx(dt,{children:"Tweet Cards"}),t.jsx(it,{})]})})};export{xt as default};
+`,mt=()=>{var r;const n=((r=k().state)==null?void 0:r.from)??"/";return t.jsx(ct,{children:t.jsxs(F,{children:[t.jsx(I,{}),t.jsx(dt,{children:"Users Tweets"}),t.jsx(C,{to:n,children:t.jsx(P,{})}),t.jsx(pt,{children:"Tweet Cards"}),t.jsx(lt,{})]})})};export{mt as default};
