@@ -156,7 +156,9 @@ export const ButtonFollow = styled.button`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 36px;
-  background: var(--background-body);
+
+  background: ${({ isFollowed }) =>
+    isFollowed ? "var(--button-color-active)" : "var(--background-body)"};
 
   border-radius: var(--border-radius);
   padding: 14px 28px;

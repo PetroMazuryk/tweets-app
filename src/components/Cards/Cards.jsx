@@ -69,7 +69,6 @@ const Cards = () => {
     <>
       {error && <p>Error: {error}</p>}
       <WrapperSelect>
-        {" "}
         <DropDown
           options={selectOptions}
           filter={filter}
@@ -80,7 +79,7 @@ const Cards = () => {
         {isLoading && items.length === 0 ? (
           <CardsLoader size={50} color="aqua" />
         ) : (
-          items.map(({ id, avatar, followers, tweets, user }) => (
+          items.map(({ id, avatar, followers, tweets, user, isFollowed }) => (
             <CardsItem key={id}>
               <MainLogo src={Logo} alt="Logo Image" />
               <PromoImgCards src={PromoImg} alt="Promo Image" />
@@ -95,13 +94,14 @@ const Cards = () => {
                 <CardUserName>user: {user}</CardUserName>
                 <TweetsText>tweets: {tweets}</TweetsText>
                 <CardUserFollowers>followers: {followers}</CardUserFollowers>
-                <ButtonFollow type="button">Following</ButtonFollow>
+                <ButtonFollow type="button" isFollowed={isFollowed}>
+                  {isFollowed ? "Following" : "Follow"}
+                </ButtonFollow>
               </TweetsContainer>
             </CardsItem>
           ))
         )}
       </CardList>
-      {/* {isLoading && items.length > 0 && <p>Loading more...</p>} */}
 
       {hasMore && (
         <ButtonLoadMore onClick={loadMoreHandler} disabled={isLoading}>
