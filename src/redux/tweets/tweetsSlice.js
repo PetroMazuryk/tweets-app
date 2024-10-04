@@ -1,16 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchTweets } from "./operations";
+import { fetchTweets, updateFollowers } from "./operations";
+
+const initialState = {
+  items: [],
+  page: 1,
+  limit: 3,
+  hasMore: true,
+  isLoading: false,
+  error: null,
+};
 
 const tweetsSlice = createSlice({
   name: "tweets",
-  initialState: {
-    items: [],
-    page: 1,
-    limit: 3,
-    hasMore: true,
-    isLoading: false,
-    error: null,
-  },
+  initialState,
   reducers: {
     resetTweets: (state) => {
       state.items = [];
@@ -37,6 +39,23 @@ const tweetsSlice = createSlice({
       .addCase(fetchTweets.rejected, (state, { payload }) => {
         state.isLoading = false;
         state.error = payload;
+      })
+
+      .addCase(updateFollowers.pending, (state) => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(updateFollowers.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        const updatedTweet = action.payload;
+        state.items = state.items.map((tweet) =>
+          tweet.id === updatedTweet.id ? updatedTweet : tweet
+        );
+      })
+      .addCase(updateFollowers.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
       });
   },
 });

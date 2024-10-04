@@ -36,7 +36,7 @@ import {
   ButtonLoadMore,
   NoMore,
 } from "./Cards.styled";
-import { fetchTweets } from "../../redux/tweets/operations";
+import { fetchTweets, updateFollowers } from "../../redux/tweets/operations";
 
 const Cards = () => {
   const dispatch = useDispatch();
@@ -64,6 +64,10 @@ const Cards = () => {
     if (!isLoading && hasMore) {
       dispatch(fetchTweets({ page }));
     }
+  };
+
+  const handleFollowClick = (id, isFollowed) => {
+    dispatch(updateFollowers({ tweetId: id, isFollowed }));
   };
 
   return (
@@ -95,7 +99,11 @@ const Cards = () => {
                 <CardUserName>user: {user}</CardUserName>
                 <TweetsText>tweets: {tweets}</TweetsText>
                 <CardUserFollowers>followers: {followers}</CardUserFollowers>
-                <ButtonFollow type="button" isFollowed={isFollowed}>
+                <ButtonFollow
+                  type="button"
+                  isFollowed={isFollowed}
+                  onClick={() => handleFollowClick(id, isFollowed)}
+                >
                   {isFollowed ? "Following" : "Follow"}
                 </ButtonFollow>
               </TweetsContainer>

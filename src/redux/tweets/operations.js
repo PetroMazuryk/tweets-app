@@ -14,3 +14,17 @@ export const fetchTweets = createAsyncThunk(
     }
   }
 );
+
+export const updateFollowers = createAsyncThunk(
+  "tweets/updateFollowers",
+  async ({ tweetId, isFollowed }, { rejectWithValue }) => {
+    try {
+      const response = await apiInstance.put(`/tweets/${tweetId}`, {
+        isFollowed: !isFollowed,
+      });
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
