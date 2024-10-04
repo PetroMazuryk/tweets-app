@@ -1,4 +1,4 @@
-import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js";import{G as L,n as o,F as T,L as z,C as F,N as I}from"./Navigation-j3y6ur2R.js";function B(e){return L({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(e)}const S=o.button`
+import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-8hdsXgig.js";import{G as L,n as o,F as z,L as T,C as F,N as I}from"./Navigation-Cdk53ZBF.js";function B(e){return L({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(e)}const M=o.button`
   width: 140px;
   height: 46px;
   display: flex;
@@ -29,11 +29,11 @@ import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js
     margin-right: auto;
     margin-bottom: 20px;
   }
-`,M=o.span`
+`,S=o.span`
   display: flex;
   align-items: center;
   margin-right: 12px;
-`,P=()=>t.jsxs(S,{children:[t.jsx(M,{children:t.jsx(B,{})}),"Go Back"]}),A=e=>e.tweets.items,E=e=>e.tweets.isLoading,R=e=>e.tweets.error,U=e=>e.tweets.hasMore,D=e=>e.tweets.page,G=o.select`
+`,P=()=>t.jsxs(M,{children:[t.jsx(S,{children:t.jsx(B,{})}),"Go Back"]}),A=e=>e.tweets.items,E=e=>e.tweets.isLoading,R=e=>e.tweets.error,U=e=>e.tweets.hasMore,D=e=>e.tweets.page,N=o.select`
   width: 100%;
   height: 40px;
   border-radius: var(--border-radius);
@@ -50,7 +50,7 @@ import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js
   &:focus {
     border-color: #004080;
   }
-`,N=({options:e,filter:n,onSelect:r})=>{const i=a=>{r(a.target.value)};return t.jsx("div",{children:t.jsx(G,{value:n,onChange:i,children:e.map(a=>t.jsx("option",{value:a.value,children:a.label},a.value))})})},H=[{value:"all",label:"Show all"},{value:"follow",label:"Follow"},{value:"following",label:"Following"}],W="/tweets-app/assets/picture-B77hZ4Xo.png",O="/tweets-app/assets/Rectangle-Cw4HuGmw.png",q="/tweets-app/assets/Ellipse-DmnRR60u.png",X=o(T)`
+`,G=({options:e,filter:n,onSelect:r})=>{const i=a=>{r(a.target.value)};return t.jsx("div",{children:t.jsx(N,{value:n,onChange:i,children:e.map(a=>t.jsx("option",{value:a.value,children:a.label},a.value))})})},H=[{value:"all",label:"Show all"},{value:"follow",label:"Follow"},{value:"following",label:"Following"}],W="/tweets-app/assets/picture-B77hZ4Xo.png",O="/tweets-app/assets/Rectangle-Cw4HuGmw.png",q="/tweets-app/assets/Ellipse-DmnRR60u.png",X=o(z)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,11 +213,20 @@ import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js
     background: var(--button-hover);
     color: var(--button-color-text);
   }
-`,lt=()=>{const e=y(),n=s(A),r=s(E),i=s(R),a=s(D),l=s(U),p=d.useRef(!0),[u,f]=d.useState("all"),h=c=>{f(c)};d.useEffect(()=>{p.current&&!r&&(e(m({page:a})),p.current=!1)},[e,n.length,a,r]);const b=()=>{!r&&l&&e(m({page:a}))};return t.jsxs(t.Fragment,{children:[i&&t.jsxs("p",{children:["Error: ",i]}),t.jsx(Z,{children:t.jsx(N,{options:H,filter:u,onSelect:h})}),t.jsx($,{children:r&&n.length===0?t.jsx(X,{size:50,color:"aqua"}):n.map(({id:c,avatar:v,followers:w,tweets:j,user:g,isFollowed:x})=>t.jsxs(J,{children:[t.jsx(K,{src:z,alt:"Logo Image"}),t.jsx(Q,{src:W,alt:"Promo Image"}),t.jsxs(V,{children:[t.jsx(Y,{src:O,alt:"Rectangle line"}),t.jsxs(_,{children:[t.jsx(tt,{src:q,alt:"Ellipse png"}),t.jsx(ot,{src:v,alt:g})]})]}),t.jsxs(et,{children:[t.jsxs(at,{children:["user: ",g]}),t.jsxs(rt,{children:["tweets: ",j]}),t.jsxs(nt,{children:["followers: ",w]}),t.jsx(st,{type:"button",isFollowed:x,children:x?"Following":"Follow"})]})]},c))}),l&&t.jsx(it,{onClick:b,disabled:r,children:r&&n.length>0?t.jsx("p",{children:"Loading more..."}):t.jsx("p",{children:"Load more"})}),!l&&t.jsx("p",{children:"No more tweets to load"})]})},ct=o.section`
+`,lt=o.p`
+  font-size: 20px;
+
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text-more);
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+`,ct=()=>{const e=y(),n=s(A),r=s(E),i=s(R),a=s(D),l=s(U),p=d.useRef(!0),[f,u]=d.useState("all"),h=c=>{u(c)};d.useEffect(()=>{p.current&&!r&&(e(m({page:a})),p.current=!1)},[e,n.length,a,r]);const b=()=>{!r&&l&&e(m({page:a}))};return t.jsxs(t.Fragment,{children:[i&&t.jsxs("p",{children:["Error: ",i]}),t.jsx(Z,{children:t.jsx(G,{options:H,filter:f,onSelect:h})}),t.jsx($,{children:r&&n.length===0?t.jsx(X,{size:50,color:"aqua"}):n.map(({id:c,avatar:v,followers:w,tweets:j,user:g,isFollowed:x})=>t.jsxs(J,{children:[t.jsx(K,{src:T,alt:"Logo Image"}),t.jsx(Q,{src:W,alt:"Promo Image"}),t.jsxs(V,{children:[t.jsx(Y,{src:O,alt:"Rectangle line"}),t.jsxs(_,{children:[t.jsx(tt,{src:q,alt:"Ellipse png"}),t.jsx(ot,{src:v,alt:g})]})]}),t.jsxs(et,{children:[t.jsxs(at,{children:["user: ",g]}),t.jsxs(rt,{children:["tweets: ",j]}),t.jsxs(nt,{children:["followers: ",w]}),t.jsx(st,{type:"button",isFollowed:x,children:x?"Following":"Follow"})]})]},c))}),l&&t.jsx(it,{onClick:b,disabled:r,children:r&&n.length>0?t.jsx("p",{children:"Loading more..."}):t.jsx("p",{children:"Load more"})}),!l&&t.jsx(lt,{children:"No more tweets to load"})]})},dt=o.section`
   padding: 20px;
   min-height: 100vh;
   background: var(--background-body);
-`,dt=o.h1`
+`,pt=o.h1`
   font-family: var(--font-family);
   display: flex;
   justify-content: center;
@@ -233,7 +242,7 @@ import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js
   @media screen and (max-width: 475px) {
     font-size: 31px;
   }
-`,pt=o.h1`
+`,gt=o.h1`
   font-family: var(--font-family);
   display: flex;
   justify-content: center;
@@ -248,4 +257,4 @@ import{j as t,u as y,a as s,r as d,f as m,b as k,L as C}from"./index-CUDVrd0e.js
   @media screen and (max-width: 475px) {
     font-size: 21px;
   }
-`,mt=()=>{var r;const n=((r=k().state)==null?void 0:r.from)??"/";return t.jsx(ct,{children:t.jsxs(F,{children:[t.jsx(I,{}),t.jsx(dt,{children:"Users Tweets"}),t.jsx(C,{to:n,children:t.jsx(P,{})}),t.jsx(pt,{children:"Tweet Cards"}),t.jsx(lt,{})]})})};export{mt as default};
+`,ft=()=>{var r;const n=((r=k().state)==null?void 0:r.from)??"/";return t.jsx(dt,{children:t.jsxs(F,{children:[t.jsx(I,{}),t.jsx(pt,{children:"Users Tweets"}),t.jsx(C,{to:n,children:t.jsx(P,{})}),t.jsx(gt,{children:"Tweet Cards"}),t.jsx(ct,{})]})})};export{ft as default};
