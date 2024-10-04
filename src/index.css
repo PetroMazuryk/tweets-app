@@ -2,6 +2,7 @@ body[data-theme="light"] {
   --font-family: "Montserrat";
   --color-text: #2c7fc8;
   --color-text-btn: #296090;
+  --color-text-more: #ae4e4e;
   --background-home: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
   --background-body: linear-gradient(to right, #5433ff, #20bdff, #a5fecb);
   --background-card: linear-gradient(to right, #000428, #004e92);
@@ -19,6 +20,7 @@ body[data-theme="dark"] {
   --font-family: "Montserrat";
   --color-text: #cfbfe1;
   --color-text-btn: #cfbfe1;
+  --color-text-more: #c98585;
   --background-home: linear-gradient(to right, #353554, #302b63, #17114c);
   --background-body: linear-gradient(to right, #2a0845, #6441a5);
   --background-card: linear-gradient(
@@ -32,7 +34,7 @@ body[data-theme="dark"] {
   --transition: 0.5s;
   --border-radius: 10px;
   --button-color-text: #373737;
-  --button-color-active: #67d1aa;
+  --button-color-active: #459d7d;
   --button-hover: linear-gradient(to right, #20002c, #cbb4d4);
   --box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
 }

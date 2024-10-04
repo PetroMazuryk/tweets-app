@@ -198,3 +198,14 @@ export const ButtonLoadMore = styled.button`
     color: var(--button-color-text);
   }
 `;
+
+export const NoMore = styled.p`
+  font-size: 20px;
+
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text-more);
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
+`;

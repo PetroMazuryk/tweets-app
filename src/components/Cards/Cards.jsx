@@ -34,6 +34,7 @@ import {
   ImgAvatar,
   CardsLoader,
   ButtonLoadMore,
+  NoMore,
 } from "./Cards.styled";
 import { fetchTweets } from "../../redux/tweets/operations";
 
@@ -113,7 +114,7 @@ const Cards = () => {
         </ButtonLoadMore>
       )}
 
-      {!hasMore && <p>No more tweets to load</p>}
+      {!hasMore && <NoMore>No more tweets to load</NoMore>}
     </>
   );
 };
