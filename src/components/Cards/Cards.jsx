@@ -70,6 +70,16 @@ const Cards = () => {
     dispatch(updateFollowers({ tweetId: id, isFollowed }));
   };
 
+  const filteredItems = items.filter((tweet) => {
+    if (filter === "follow") {
+      return !tweet.isFollowed;
+    }
+    if (filter === "following") {
+      return tweet.isFollowed;
+    }
+    return true;
+  });
+
   return (
     <>
       {error && <p>Error: {error}</p>}
@@ -84,31 +94,33 @@ const Cards = () => {
         {isLoading && items.length === 0 ? (
           <CardsLoader size={50} color="aqua" />
         ) : (
-          items.map(({ id, avatar, followers, tweets, user, isFollowed }) => (
-            <CardsItem key={id}>
-              <MainLogo src={Logo} alt="Logo Image" />
-              <PromoImgCards src={PromoImg} alt="Promo Image" />
-              <AvatarWrapper>
-                <TransverseCards src={Transverse} alt="Rectangle line" />
-                <AvatarOvalContainer>
-                  <AvatarCardsCircle src={AvatarCards} alt="Ellipse png" />
-                  <ImgAvatar src={avatar} alt={user} />
-                </AvatarOvalContainer>
-              </AvatarWrapper>
-              <TweetsContainer>
-                <CardUserName>user: {user}</CardUserName>
-                <TweetsText>tweets: {tweets}</TweetsText>
-                <CardUserFollowers>followers: {followers}</CardUserFollowers>
-                <ButtonFollow
-                  type="button"
-                  isFollowed={isFollowed}
-                  onClick={() => handleFollowClick(id, isFollowed)}
-                >
-                  {isFollowed ? "Following" : "Follow"}
-                </ButtonFollow>
-              </TweetsContainer>
-            </CardsItem>
-          ))
+          filteredItems.map(
+            ({ id, avatar, followers, tweets, user, isFollowed }) => (
+              <CardsItem key={id}>
+                <MainLogo src={Logo} alt="Logo Image" />
+                <PromoImgCards src={PromoImg} alt="Promo Image" />
+                <AvatarWrapper>
+                  <TransverseCards src={Transverse} alt="Rectangle line" />
+                  <AvatarOvalContainer>
+                    <AvatarCardsCircle src={AvatarCards} alt="Ellipse png" />
+                    <ImgAvatar src={avatar} alt={user} />
+                  </AvatarOvalContainer>
+                </AvatarWrapper>
+                <TweetsContainer>
+                  <CardUserName>user: {user}</CardUserName>
+                  <TweetsText>tweets: {tweets}</TweetsText>
+                  <CardUserFollowers>followers: {followers}</CardUserFollowers>
+                  <ButtonFollow
+                    type="button"
+                    isFollowed={isFollowed}
+                    onClick={() => handleFollowClick(id, isFollowed)}
+                  >
+                    {isFollowed ? "Following" : "Follow"}
+                  </ButtonFollow>
+                </TweetsContainer>
+              </CardsItem>
+            )
+          )
         )}
       </CardList>
 
