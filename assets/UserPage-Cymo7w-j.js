@@ -1,4 +1,4 @@
-import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.js";import{G as T,n as o,F,L as I,C as B,N as M}from"./Navigation-s6y77ZVl.js";function S(e){return T({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(e)}const P=o.button`
+import{j as t,u as C,a as s,r as x,f as u,b as L,c as z,L as T}from"./index-tQey4HRb.js";import{G as F,n as o,F as I,L as B,C as M,N as S}from"./Navigation-RU6TESXx.js";function P(e){return F({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(e)}const A=o.button`
   width: 140px;
   height: 46px;
   display: flex;
@@ -29,11 +29,11 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
     margin-right: auto;
     margin-bottom: 20px;
   }
-`,A=o.span`
+`,E=o.span`
   display: flex;
   align-items: center;
   margin-right: 12px;
-`,E=()=>t.jsxs(P,{children:[t.jsx(A,{children:t.jsx(S,{})}),"Go Back"]}),R=e=>e.tweets.items,U=e=>e.tweets.isLoading,D=e=>e.tweets.error,N=e=>e.tweets.hasMore,G=e=>e.tweets.page,H=o.select`
+`,R=()=>t.jsxs(A,{children:[t.jsx(E,{children:t.jsx(P,{})}),"Go Back"]}),U=e=>e.tweets.items,D=e=>e.tweets.isLoading,N=e=>e.tweets.error,G=e=>e.tweets.hasMore,H=e=>e.tweets.page,W=o.select`
   width: 100%;
   height: 40px;
   border-radius: var(--border-radius);
@@ -50,7 +50,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   &:focus {
     border-color: #004080;
   }
-`,W=({options:e,filter:n,onSelect:r})=>{const l=a=>{r(a.target.value)};return t.jsx("div",{children:t.jsx(H,{value:n,onChange:l,children:e.map(a=>t.jsx("option",{value:a.value,children:a.label},a.value))})})},O=[{value:"all",label:"Show all"},{value:"follow",label:"Follow"},{value:"following",label:"Following"}],q="/tweets-app/assets/picture-B77hZ4Xo.png",X="/tweets-app/assets/Rectangle-Cw4HuGmw.png",Z="/tweets-app/assets/Ellipse-DmnRR60u.png",$=o(F)`
+`,O=({options:e,filter:i,onSelect:r})=>{const l=a=>{r(a.target.value)};return t.jsx("div",{children:t.jsx(W,{value:i,onChange:l,children:e.map(a=>t.jsx("option",{value:a.value,children:a.label},a.value))})})},q=[{value:"all",label:"Show all"},{value:"follow",label:"Follow"},{value:"following",label:"Following"}],X="/tweets-app/assets/picture-B77hZ4Xo.png",Z="/tweets-app/assets/Rectangle-Cw4HuGmw.png",$="/tweets-app/assets/Ellipse-DmnRR60u.png",J=o(I)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,40 +68,40 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
       transform: rotate(360deg);
     }
   }
-`,J=o.div`
+`,K=o.div`
   width: 140px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-`,K=o.ul`
+`,Q=o.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 30px;
-`,Q=o.li`
+`,V=o.li`
   position: relative;
   width: 380px;
   background: var(--background-card);
   border-radius: 20px;
-`,V=o.img`
+`,Y=o.img`
   width: 100px;
   padding-top: 20px;
   padding-left: 20px;
   margin-bottom: 180px;
-`,Y=o.img`
+`,_=o.img`
   position: absolute;
   top: 28px;
   left: 36px;
   width: 308px;
   height: 168px;
-`,_=o.div`
+`,tt=o.div`
   position: relative;
-`,tt=o.img`
+`,ot=o.img`
   display: block;
   width: 100%;
   margin-bottom: 62px;
-`,ot=o.div`
+`,et=o.div`
   width: 130px;
   height: 130px;
   position: absolute;
@@ -109,14 +109,14 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background-body);
-`,et=o.img`
+`,rt=o.img`
   position: absolute;
   top: 50%;
   left: 50%;
   width: 130px;
   height: 130px;
   transform: translate(-50%, -50%);
-`,rt=o.img`
+`,at=o.img`
   position: absolute;
   top: 45%;
   left: 50%;
@@ -124,7 +124,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   height: 100px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-`,at=o.div`
+`,nt=o.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +132,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
-`,nt=o.p`
+`,it=o.p`
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 20px;
@@ -152,7 +152,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
-`,it=o.p`
+`,lt=o.p`
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 20px;
@@ -162,7 +162,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
-`,lt=o.button`
+`,ct=o.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,7 +190,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
     background: var(--button-hover);
     color: var(--button-color-text);
   }
-`,ct=o.button`
+`,dt=o.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -213,7 +213,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
     background: var(--button-hover);
     color: var(--button-color-text);
   }
-`,dt=o.p`
+`,pt=o.p`
   font-size: 20px;
 
   font-weight: 700;
@@ -222,11 +222,11 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   @media screen and (min-width: 1200px) {
     font-size: 30px;
   }
-`,pt=()=>{const e=k(),n=i(R),r=i(U),l=i(D),a=i(G),c=i(N),x=g.useRef(!0),[u,h]=g.useState("all"),b=s=>{h(s)};g.useEffect(()=>{x.current&&!r&&(e(f({page:a})),x.current=!1)},[e,n.length,a,r]);const v=()=>{!r&&c&&e(f({page:a}))},w=(s,d)=>{e(C({tweetId:s,isFollowed:d}))};return t.jsxs(t.Fragment,{children:[l&&t.jsxs("p",{children:["Error: ",l]}),t.jsx(J,{children:t.jsx(W,{options:O,filter:u,onSelect:b})}),t.jsx(K,{children:r&&n.length===0?t.jsx($,{size:50,color:"aqua"}):n.map(({id:s,avatar:d,followers:j,tweets:y,user:m,isFollowed:p})=>t.jsxs(Q,{children:[t.jsx(V,{src:I,alt:"Logo Image"}),t.jsx(Y,{src:q,alt:"Promo Image"}),t.jsxs(_,{children:[t.jsx(tt,{src:X,alt:"Rectangle line"}),t.jsxs(ot,{children:[t.jsx(et,{src:Z,alt:"Ellipse png"}),t.jsx(rt,{src:d,alt:m})]})]}),t.jsxs(at,{children:[t.jsxs(st,{children:["user: ",m]}),t.jsxs(nt,{children:["tweets: ",y]}),t.jsxs(it,{children:["followers: ",j]}),t.jsx(lt,{type:"button",isFollowed:p,onClick:()=>w(s,p),children:p?"Following":"Follow"})]})]},s))}),c&&t.jsx(ct,{onClick:v,disabled:r,children:r&&n.length>0?t.jsx("p",{children:"Loading more..."}):t.jsx("p",{children:"Load more"})}),!c&&t.jsx(dt,{children:"No more tweets to load"})]})},gt=o.section`
+`,gt=()=>{const e=C(),i=s(U),r=s(D),l=s(N),a=s(H),c=s(G),m=x.useRef(!0),[d,h]=x.useState("all"),b=n=>{h(n)};x.useEffect(()=>{m.current&&!r&&(e(u({page:a})),m.current=!1)},[e,i.length,a,r]);const v=()=>{!r&&c&&e(u({page:a}))},w=(n,p)=>{e(L({tweetId:n,isFollowed:p}))},j=i.filter(n=>d==="follow"?!n.isFollowed:d==="following"?n.isFollowed:!0);return t.jsxs(t.Fragment,{children:[l&&t.jsxs("p",{children:["Error: ",l]}),t.jsx(K,{children:t.jsx(O,{options:q,filter:d,onSelect:b})}),t.jsx(Q,{children:r&&i.length===0?t.jsx(J,{size:50,color:"aqua"}):j.map(({id:n,avatar:p,followers:y,tweets:k,user:f,isFollowed:g})=>t.jsxs(V,{children:[t.jsx(Y,{src:B,alt:"Logo Image"}),t.jsx(_,{src:X,alt:"Promo Image"}),t.jsxs(tt,{children:[t.jsx(ot,{src:Z,alt:"Rectangle line"}),t.jsxs(et,{children:[t.jsx(rt,{src:$,alt:"Ellipse png"}),t.jsx(at,{src:p,alt:f})]})]}),t.jsxs(nt,{children:[t.jsxs(st,{children:["user: ",f]}),t.jsxs(it,{children:["tweets: ",k]}),t.jsxs(lt,{children:["followers: ",y]}),t.jsx(ct,{type:"button",isFollowed:g,onClick:()=>w(n,g),children:g?"Following":"Follow"})]})]},n))}),c&&t.jsx(dt,{onClick:v,disabled:r,children:r&&i.length>0?t.jsx("p",{children:"Loading more..."}):t.jsx("p",{children:"Load more"})}),!c&&t.jsx(pt,{children:"No more tweets to load"})]})},xt=o.section`
   padding: 20px;
   min-height: 100vh;
   background: var(--background-body);
-`,xt=o.h1`
+`,mt=o.h1`
   font-family: var(--font-family);
   display: flex;
   justify-content: center;
@@ -242,7 +242,7 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   @media screen and (max-width: 475px) {
     font-size: 31px;
   }
-`,mt=o.h1`
+`,ft=o.h1`
   font-family: var(--font-family);
   display: flex;
   justify-content: center;
@@ -257,4 +257,4 @@ import{j as t,u as k,a as i,r as g,f,b as C,c as L,L as z}from"./index-yreY7AUn.
   @media screen and (max-width: 475px) {
     font-size: 21px;
   }
-`,ht=()=>{var r;const n=((r=L().state)==null?void 0:r.from)??"/";return t.jsx(gt,{children:t.jsxs(B,{children:[t.jsx(M,{}),t.jsx(xt,{children:"Users Tweets"}),t.jsx(z,{to:n,children:t.jsx(E,{})}),t.jsx(mt,{children:"Tweet Cards"}),t.jsx(pt,{})]})})};export{ht as default};
+`,bt=()=>{var r;const i=((r=z().state)==null?void 0:r.from)??"/";return t.jsx(xt,{children:t.jsxs(M,{children:[t.jsx(S,{}),t.jsx(mt,{children:"Users Tweets"}),t.jsx(T,{to:i,children:t.jsx(R,{})}),t.jsx(ft,{children:"Tweet Cards"}),t.jsx(gt,{})]})})};export{bt as default};
