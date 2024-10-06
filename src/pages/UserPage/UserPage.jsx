@@ -8,6 +8,7 @@ import {
   PageUserWrapper,
   PageUserTitle,
   PageUserDescription,
+  StyledScrollToTop,
 } from "./UserPage.styled";
 
 const UserPage = () => {
@@ -15,6 +16,7 @@ const UserPage = () => {
   const backLink = location.state?.from ?? "/";
   return (
     <PageUserWrapper>
+      <StyledScrollToTop smooth />
       <Container>
         <Navigation />
         <PageUserTitle>Users Tweets</PageUserTitle>

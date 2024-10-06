@@ -10,7 +10,7 @@ import {
 } from "../../redux/tweets/selectors";
 import DropDown from "../DropDown/DropDown";
 import { selectOptions } from "../../constants/selectOptions";
-
+import { animateScroll as scroll } from "react-scroll";
 import Logo from "../../assets/Logo.png";
 import PromoImg from "../../assets/picture.png";
 import Transverse from "../../assets/Rectangle.png";
@@ -64,6 +64,10 @@ const Cards = () => {
     if (!isLoading && hasMore) {
       dispatch(fetchTweets({ page }));
     }
+    scroll.scrollToBottom({
+      duration: 500,
+      smooth: "easeInOutQuad",
+    });
   };
 
   const handleFollowClick = (id, isFollowed) => {
