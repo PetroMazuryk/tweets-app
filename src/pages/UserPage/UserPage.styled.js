@@ -45,7 +45,7 @@ export const PageUserDescription = styled.h1`
 export const StyledScrollToTop = styled(ScrollToTop)`
   width: 54px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50%; !important;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -53,7 +53,7 @@ export const StyledScrollToTop = styled(ScrollToTop)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--background-body);
+  background: var(--background-body); !important;
   transition: var(--transition);
 
   &:hover {
