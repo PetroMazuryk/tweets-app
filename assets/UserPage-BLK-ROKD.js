@@ -1,4 +1,4 @@
-import{j as u,c as G,r as L,a as wt,u as Et,b as A,f as Le,d as Ot,g as St,e as Tt,L as xt}from"./index-BrYf6RxG.js";import{G as Pt,n as v,F as kt,L as jt,C as Lt,N as Ct}from"./Navigation-llwBKAj6.js";function Mt(t){return Pt({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(t)}const $t=v.button`
+import{j as u,c as G,r as L,a as wt,u as Et,b as A,f as Le,d as Ot,g as St,e as Tt,L as xt}from"./index-G739p_QD.js";import{G as Pt,n as v,F as kt,L as jt,C as Lt,N as Ct}from"./Navigation-CSPop0Cz.js";function Mt(t){return Pt({tag:"svg",attr:{version:"1.1",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{d:"M0.5 8l7.5 7.5v-4.5h8v-6h-8v-4.5z"},child:[]}]})(t)}const $t=v.button`
   width: 140px;
   height: 46px;
   display: flex;
@@ -290,7 +290,7 @@ PERFORMANCE OF THIS SOFTWARE.
 `,ko=v(So)`
   width: 54px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50%; !important;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -298,7 +298,7 @@ PERFORMANCE OF THIS SOFTWARE.
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--background-body);
+  background: var(--background-body); !important;
   transition: var(--transition);
 
   &:hover {
