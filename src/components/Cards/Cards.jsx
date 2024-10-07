@@ -15,6 +15,7 @@ import Logo from "../../assets/Logo.png";
 import PromoImg from "../../assets/picture.png";
 import Transverse from "../../assets/Rectangle.png";
 import AvatarCards from "../../assets/Ellipse.png";
+import imgDefault from "../../assets/imgDefault.jpg";
 
 import {
   WrapperSelect,
@@ -107,7 +108,7 @@ const Cards = () => {
                   <TransverseCards src={Transverse} alt="Rectangle line" />
                   <AvatarOvalContainer>
                     <AvatarCardsCircle src={AvatarCards} alt="Ellipse png" />
-                    <ImgAvatar src={avatar} alt={user} />
+                    <ImgAvatar src={!avatar ? imgDefault : avatar} alt={user} />
                   </AvatarOvalContainer>
                 </AvatarWrapper>
                 <TweetsContainer>
